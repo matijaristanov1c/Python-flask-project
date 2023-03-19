@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show all</title>
+</head>
+<body>
+    {% if 'broj_prijave' in session%}
+    <a href="/logout">Logout</a>
+    {% else %}
+    <a href="/register">Registruj se</a>
+    <a href="/login">Loginuj se</a>
+    {% endif %}
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>ID</th>
+            <th>Broj prijave</th>
+            <th>Sifra</th>
+            <th>Pol</th>
+            <th>Etapa jedan</th>
+            <th>Etapa dva</th>
+        </tr>
+        {% for b in biciklisti %}
+        <tr>
+            <td>{{b.get_id()}}</td>
+            <td>{{b.get_broj_prijave()}}</td>
+            <td>{{b.get_sifra()}}</td>
+            <td>{{b.get_pol()}}</td>
+            <td>{{b.get_etapa_jedan()}}</td>
+            <td>{{b.get_etapa_dva()}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

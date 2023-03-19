@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Registruj se</h1>
+    <form action="/register" method="POST">
+        <p>
+            <label for="broj_prijave">Broj prijave</label>
+            <input type="text" name="broj_prijave">
+            <span>{{broj_prijave_greska}}</span>
+        </p>
+
+        
+        <p>
+            <label for="sifra">Sifra</label>
+            <input type="password" name="sifra">
+            <span>{{sifra_greska}}</span>
+        </p>
+
+        <p>
+            <label for="potvrda">Potvrda</label>
+            <input type="password" name="potvrda">
+        </p>
+
+        <p>
+            <label for="pol">Pol</label>
+            <input type="radio" name="pol" value="Muski">Muski
+            <input type="radio" name="pol" value="Zenski">Zenski
+        </p>
+
+
+        <p>
+            <label for="etapa_jedan">Etapa jedan</label>
+            <input type="number" name="etapa_jedan">
+            <span>{{etapa_jedan_greska}}</span>
+        </p>
+
+        <p>
+            <label for="etapa_dva">Etapa dva</label>
+            <input type="number" name="etapa_dva">
+            <span>{{etapa_dva_greska}}</span>
+        </p>
+
+        <p>
+            <input type="submit" value="Registruj se">
+        </p>
+    </form>
+</body>
+</html>
